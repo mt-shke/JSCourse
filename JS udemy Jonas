@@ -1,0 +1,195 @@
+'use strict';
+
+const calcAge3 = birthYear => 2021 - birthYear;
+const myAge = calcAge3(1988);
+console.log(myAge);
+
+// chall
+
+const calcAverage = (a, b , c) => (a + b + c) / 3;
+const aveD = calcAverage(44, 23, 71);
+const aveK = calcAverage(65, 54, 49);
+console.log(aveD);
+console.log(aveK);
+
+const checkWinner = function (aveDolphins, aveKoalas) {
+   if (aveDolphins > aveKoalas * 2 ) {
+   console.log(`Dolphins win (${aveDolphins} vs. ${aveKoalas})`);
+} else if (aveKoalas > aveDolphins * 2) {
+    console.log(`Koalas win (${aveKoalas} vs. ${aveDolphins})`);
+} else {
+console.log(`None team win this match`);
+}
+}
+
+checkWinner(aveD, aveK);
+const aved2 = calcAverage(85, 54, 41);
+const avek2 = calcAverage(23, 34, 27);
+
+checkWinner(aved2, avek2);
+
+// challenge
+
+const calcTip = function (bill) { 
+    return bill >= 50 && bill <= 300 ? bill * 15 / 100 : bill * 20 / 100;
+    }
+
+// const calcTip = (bill) => bill >= 50 && bill <= 300 ? bill * 15 / 100 : bill * 20 / 100;
+
+
+const bil57 = calcTip(100);
+console.log(`With 100 = ${bil57}`);
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips);
+
+const total = new Array(bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]);
+console.log(`This is the total ${total}`);
+
+
+const oreillettesGood = true;
+
+const casque = function (oreillettes) { 
+    return oreillettes >= 12 && oreillettesGood === true && oreillettes <= 23 ? console.log(`Vous avez ${oreillettes * 2} oreillettes vue le nombre de casques achetés.`): 
+console.log(`I fkin doesn't know what's happening here!!`);
+} 
+
+casque(98);
+
+const trainMyFunSkills = (billet, coin) => billet >= 0 || coin > 0 ? console.log(`C'est formidable, vous avez plus d'un centimes dans votre porte monnaire!!`): console.log(`This is the end.....`);
+
+trainMyFunSkills(54, 0);
+
+const clouds = false;
+const sky = 'sunny';
+const todayMeteo = (weather) => weather = true && clouds === true && sky === 'sunny' ? console.log('This is a nice sunny day!'):
+console.log('As always, just stay home and do nothing !!!!');
+
+todayMeteo(false);
+
+
+const callMeNoWay = function (myPhone) { return (myPhone + '48' + '6339') == '0612486339' ?
+ console.log(`Is this my real phone number?!!`) :
+ console.log(`Just kidding, I don't know who's phone is this`);
+}
+
+callMeNoWay('0612');
+
+
+const testNum = function(calcul, oper) { 
+    return calcul + oper == 18 && 65 === 75 - 10 && 'le pere noel existe ou pas' || 'this is true' === false ? console.log('Good'):
+    console.log('bad, really bad');
+}
+const tenNum = 10;
+testNum(tenNum, 8);
+
+const justAnotherUselessFunction = func => func + 134 == 234 ? console.log(`Great u r good at maths!! ${func} is the solution.`):
+console.log(`No way ${100 - func} left!`)
+
+justAnotherUselessFunction(18);
+
+const anotherFunc = (funk) => 829 - funk === 800 ? console.log(Great): console.log(BAAAD);
+const Great = 'GREATTT';
+const BAAAD = 'Ril Bad';
+
+anotherFunc(29);
+
+
+const letsAnotherWithBrac = function (pad) { return pad == 21 ? console.log('it is gone'): console.log('still there');
+}
+
+letsAnotherWithBrac(21);
+
+const iona = { 
+    firstName : 'Iona',
+    lastName : 'Anoi',
+    friends : ['Rhein', 'Ilka', 'Penelope'],
+    birthYear : 1998,
+    adult: true,
+    isAdult : function() { return (2021 - this.birthYear) >= 18 && this.adult === true ? 'grown person' : 'children';
+    },
+
+    job: 'adventurer',
+
+    realAge: function () { this.age = 2021 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () { return `${this.firstName} ${this.lastName} has ${this.realAge()} years old, and can wander away like a ${this.adult ? 'really gran person.': "children which don't know where home is."}`   },
+
+};
+
+console.log(`${iona.firstName} has ${iona.friends.length} friends and her best friend is ${iona.friends[0]}.`);
+
+const askName = prompt('What are you doing here, do you know Iona? If yes then what is Anoi to her? If you are a liar I kick you!');
+console.log(iona[askName]);
+
+// challenge
+
+console.log(`${iona.firstName} is an ${iona.job}, has ${iona.realAge()} years old, and can wander away like a ${iona.isAdult()}`)
+
+console.log(iona.getSummary());
+
+// challenge
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMIMark : function () { this.bmi = this.mass / (this.height ** 2); 
+        return this.bmi;
+    }
+}
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMIJohn : function () { this.bmi = this.mass / (this.height ** 2); 
+        return this.bmi;
+}
+}
+
+mark.calcBMIMark();
+john.calcBMIJohn();
+
+const bmiCompare = function () { mark.bmi > john.bmi ? console.log(`${mark.fullName}'s BMI (${mark.calcBMIMark()}) is higher than ${john.fullName}'s(${john.bmi}).`) :
+console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s(${mark.bmi}).`);
+}
+
+bmiCompare();
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals – Part 2</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+      }
+      h1 {
+        font-family: sans-serif;
+        font-size: 50px;
+        line-height: 1.3;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Fundamentals – Part 2</h1>
+    <script src="script.js"></script>
+  </body>
+</html>

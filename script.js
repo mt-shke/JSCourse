@@ -197,10 +197,12 @@ for (let i = 0; i < payMonth.length; i++) {
 
 console.log(payWoTaxes);
 
+const calcPay = function(param) { 
+let totals = 0;
 for (let i = 0; i < payMonth.length; i++) {
-payTotal.push(payWoTaxes[i]);
+totals = payMonth[i] + totals);
+} param = totals / payMonth.length;
 }
-console.log(payTotal);
 
 // AAAAAAAA FIINIR
 

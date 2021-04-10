@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Indie+Flower&family=Noto+Sans+TC&display=swap");
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC);
+}
+@font-face {
+  font-family: "Indie Flower";
+  src: url("https://fonts.googleapis.com/css2?family=Indie+Flower");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("https://fonts.googleapis.com/css2?family=Indie+Flower");
+}
+
+body {
+  max-width: 48em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  font-family: "Noto Sans TC", Tahoma, verdana, sans-serif;
+}
+
+.indexTitle {
+  text-align: left;
+  margin-left: 6%;
+}
+
+header.subIndexTitle {
+   {
+    margin-left: 4em;
+  }
+}
+section {
+  text-align: left;
+}
+
+h3 {
+  font-size: 2em;
+  font-family: "Indie Flower";
+}

@@ -6,9 +6,9 @@ let min = 0;
 
 myTimer = setInterval(function () {
   sec += 1;
-  if (sec == 3) {
+  if (sec == 60) {
     min += 1;
-    clearInterval(myTimer);
+    sec = 0;
   }
   console.log(min, sec);
 }, 1000);
